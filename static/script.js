@@ -17,7 +17,7 @@ document.getElementById('WinePrediction').addEventListener('submit', function (e
     };
 
     // Make a POST request to the Flask API
-    fetch('http://127.0.0.1:5000/predict', {  // Update the URL if Flask runs on a different host
+    fetch('https://wine-prediction-yfkq.onrender.com/predict', {  // Update the URL if Flask runs on a different host
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
