@@ -11,9 +11,11 @@ CORS(app)
 
 model = joblib.load("Wine.pkl")
 
-@app.route('/predict', methods=['POST'])
-def home():
+@app.route('/')
+def index():
     return render_template('index.html')
+
+@app.route('/predict', methods=['POST'])
     
 def predict():
     # Get JSON data from the request
