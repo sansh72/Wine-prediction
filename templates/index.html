@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wine Quality Prediction</title>
     <style>
-        h2 {
-        text-align: center;  /* Center the heading */
-        }
         body {
             font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/premium-photo/vintage-background-with-copy-space-red-wine_1257223-10527.jpg'); /* Replace with your background image URL */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            margin: 0; /* Remove default margin */
+            padding: 20px; /* Add padding around the body */
+        }
+        h2 {
+            text-align: center;  /* Center the heading */
+            color: #fff; /* Change text color for better visibility on dark backgrounds */
         }
         form {
             margin: 20px auto;
@@ -17,14 +23,14 @@
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            background-color: #f9f9f9;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
         }
         label {
             display: block;
             margin: 10px 0 5px;
         }
         input {
-            width: 100%;
+            width: calc(100% - 16px); /* Adjust width to account for padding */
             padding: 8px;
             margin: 5px 0 10px;
             border: 1px solid #ccc;
@@ -45,12 +51,20 @@
          #result {
             margin-top: 20px;
             font-weight: bold;
-            text-align: center;  /* Center the text */
-            font-size: 2em;    /* Increase font size (adjust as needed) */
-            display: flex;      /* Use flexbox for centering */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            height: 100px; /* Optional: Set a height for vertical centering */
+            text-align: center;  
+            font-size: 2em;    
+            display: flex;      
+            justify-content: center; 
+            align-items: center; 
+            height: 100px; 
+        }
+        
+        /* Add a footer for additional information or links */
+        footer {
+          text-align: center;
+          color: white; /* Change text color for better visibility */
+          margin-top: 20px;
+          font-size: small;
         }
 
     </style>
@@ -97,6 +111,11 @@
     </form>
 
     <div id="result"></div>
+
+    <!-- Optional footer -->
+    <footer>
+      &copy; 2024 Wine Quality Prediction. All rights reserved.
+    </footer>
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
